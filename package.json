@@ -8,5 +8,10 @@
     "start": "node server.js"
   },
   "author": "Benjamin M. Downs",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7"
+  }
 }
