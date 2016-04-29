@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "engines": {
+    "node": "4.2.6"
+  },
   "author": "Benjamin M. Downs",
   "license": "ISC",
   "dependencies": {
