@@ -3,7 +3,7 @@ let express     = require('express');
 let app         = express();
 let port        =  8080;
 let path        = require('path')
-let imageSearch = require('./imageSearch.js')
+let imageSearch = require('./routes/imageSearch.js')
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
