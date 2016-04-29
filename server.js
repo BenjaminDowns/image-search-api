@@ -1,13 +1,14 @@
-"use strict";
-let express     = require('express');
-let app         = express();
-let port        =  8080;
-let path        = require('path')
-let imageSearch = require('./routes/imageSearch.js')
+"use strict"
+
+const express     = require('express')
+const app         = express()
+const port        =  8080
+const path        = require('path')
+const imageSearch = require('./routes/imageSearch.js')
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
-});
+})
 
 app.get('/api/*', imageSearch) 
 
