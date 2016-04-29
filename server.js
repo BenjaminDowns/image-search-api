@@ -1,19 +1,18 @@
 "use strict"
 
-const express     = require('express')
-const app         = express()
-const port        =  8080
-const path        = require('path')
-const imageSearch = require('./routes/imageSearch.js')
-const recent      = require('./routes/recent.js')
+const express           = require('express')
+const app               = express()
+const path              = require('path')
+const newSearch         = require('./routes/newSearch.js')
+const recentSearches    = require('./routes/recentSearches.js')
+const port              = process.env.PORT || 8080
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'))
 })
 
-app.get('/api/*', imageSearch) 
-
-app.get('/recent', recent)
+app.get('/api/*', newSearch) 
+app.get('/recent', recentSearches)
 
 app.get('/*', function(req,res) {
     res.redirect('/')
