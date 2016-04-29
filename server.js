@@ -1,23 +1,19 @@
 "use strict";
-var express = require('express');
-var router  = express.Router();
-var app     = express();
-var port    =  8080;
-var path    = require('path')
+let express     = require('express');
+let app         = express();
+let port        =  8080;
+let path        = require('path')
+let imageSearch = require('./imageSearch.js')
 
-router.get('/', function (req, res) {
+app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-router.get('/api', function(req, res) {
-    res.send('hello from the api route')
-})
+app.get('/api/*', imageSearch) 
 
-router.get('/*', function(req,res) {
-    res.send('hello from the wildcard')
+app.get('/*', function(req,res) {
+    res.redirect('/')
 })
-
-app.use('/', router)
 
 app.listen(port);
 console.log(`listening on port ${port}`)
