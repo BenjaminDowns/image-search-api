@@ -1,7 +1,7 @@
 'use strict'
 
 const mongo = require('mongodb').MongoClient;
-const db = process.envMONGOLAB_URI || 'mongodb://localhost:27017/imageSearch'
+const db = process.env.MONGODB_URI || 'mongodb://localhost:27017/imageSearch'
 
 module.exports =
     (req, res) => {

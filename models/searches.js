@@ -1,7 +1,7 @@
 'use strict'
 
 const mongo = require('mongodb').MongoClient;
-const db = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/imageSearch'
+const db = process.env.MONGODB_URI || 'mongodb://localhost:27017/imageSearch'
 
 function saveSearch(query) {
     let time = new Date();
