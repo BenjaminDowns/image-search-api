@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel='stylesheet' href='styles.css'>
+
+</head>
+
+<body>
+    <div class='container'>
+        <div class='heading'>
+            <h2>Bing Image Searcher</h2>
+            <small>because who uses google anyway?</small>
+                    
+        </div>
+        <div class='instructions-container'>
+            <h3>How to:</h3>
+            <blockquote>
+                <p class='instructions'>
+                    1) Go to <code>https://bing-image-searcher.herokuapp.com/api/&lt;your-search-words-here&gt;</code>
+                    <br/>
+                    <br/> 2) The image search returns a JSON object containing 10 results.
+                    <br/><br/> 3) options: <br/><br/><b>Offset</b>: add '?offset=&lt;number-from-1-to-10-here&gt;'
+                    <br/> each 'offset' is equal to one page later in the search results<br/>
+                    <br/>
+                    <b>Recent</b>: get recent searches by going to <code>https://bing-image-searcher.herokuapp.com/recent</code>
+            </blockquote>
+            <h3>Examples:</h3>
+            <blockquote>
+                <p>
+                    Request: <code>https://bing-image-searcher.herokuapp.com/api/kittens?offset=2</code>
+                    <br/>
+                    <br/> Response: <a href='https://bing-image-searcher.herokuapp.com/api/kittens?offset=2'>click here to see response</a>
+                </p>
+            </blockquote>
+            <blockquote>
+                <p>
+                    Request: <code>https://bing-image-searcher.herokuapp.com/recent</code>
+                    <br/>
+                    <br/> Response: <a href='https://bing-image-searcher.herokuapp.com/recent'>click here to see response</a>
+                </p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -7,8 +7,10 @@ const newSearch         = require('./routes/newSearch.js')
 const recentSearches    = require('./routes/recentSearches.js')
 const port              = process.env.PORT || 8080
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'))
+    res.render('index.html')
 })
 
 app.get('/api/*', newSearch) 
