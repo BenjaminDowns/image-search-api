@@ -1,5 +1,5 @@
 'use strict'
-const key   = require('../config.js').acct_key
+// const key   = require('../config.js').acct_key
 const Bing  = require('node-bing-api')({ accKey: process.env.acct_key })
 const saveSearch = require('../models/searches.js')
 
