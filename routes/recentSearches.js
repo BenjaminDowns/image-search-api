@@ -18,7 +18,7 @@ module.exports =
                             throw err
                         }
                         else {
-                            res.send(result)
+                            res.send(result.reverse())
                             db.close()
                         }
                     }) // end toArray
